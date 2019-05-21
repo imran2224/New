@@ -1,6 +1,22 @@
 <html>
 <title>Jenkins PROD Website</title>
-<body background="images/IMG_*.JPG">
- <h1>Welcome to Singapore
+<body background="images/1.jpg">
+ <h1>Welcome to Singapore work : You have one jenkins master, you need to deploy ur code in stage and upon successful deployment, do the same in PROD using webhook 
+
+1. Create 3 VMs or AWS EC2 instances.
+2. Install Jenkins and docker on master, make sure you open port in security group, and reset password of ubuntu user.
+#Installation Jenkins
+sudo apt-get update -y
+sudo apt-get install default-jdk -y
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update -y
+sudo apt-get install jenkins
+service jenkins status
+
+3. Run jenkins and enable global security with JNLP and add node and add agent inside each node using winscp.
+
+4. install jdk in both the node and run the commands, make sure you open the ports.
+5. install docker in both the nodes and clone git in stage<h1>
 </body>
 </html>
